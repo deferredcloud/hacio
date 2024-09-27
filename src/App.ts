@@ -7,8 +7,8 @@ import Button from "./components/Buttons/Button";
 
 export function App(): Component {
 	return {
-		view: () => {
-			return m(
+		view: () =>
+			m(
 				Screen,
 				m(
 					"div",
@@ -17,7 +17,7 @@ export function App(): Component {
 							"flex flex-col gap-y-12 justify-center items-center text-3xl font-bold",
 					},
 					[
-						m("div", "Dashboard/Home"),
+						m("div", "Hello world"),
 						m(Button, {
 							label: "Click me",
 							icon: "Calendar",
@@ -25,7 +25,6 @@ export function App(): Component {
 						}),
 					],
 				),
-			);
-		},
+			),
 	};
 }
