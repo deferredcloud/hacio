@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.jetbrains-mono-medium {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: "medium";
+	font-style: normal;
+}
+
+.jetbrains-mono-regular {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: "normal";
+	font-style: normal;
+}
+
+.jetbrains-mono-light {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: "light";
+	font-style: normal;
+}
+
+.jetbrains-mono-semibold {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: "semibold";
+	font-style: normal;
+}
+
+.jetbrains-mono-bold {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: "bold";
+	font-style: normal;
+}
+
+.jetbrains-mono-italic {
+	font-family: "JetBrains Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: "normal";
+	font-style: italic;
+}
