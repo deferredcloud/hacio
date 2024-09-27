@@ -37,7 +37,7 @@ export const SideNavButton: FunctionComponent<Attrs> = {
 							"div",
 							{
 								className: classNames("flex transition-all", {
-									hidden: name !== "Settings",
+									hidden: name !== "Settings" || isShrunk,
 									"rotate-180": expandSettings,
 								}),
 							},

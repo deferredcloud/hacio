@@ -85,7 +85,9 @@ const SideNav: FunctionComponent = () => {
 									name: name,
 									onClick: () => {
 										navSelected.value = name;
-										expandSettings.value = !expandSettings.value;
+										if (name === "Settings") {
+											expandSettings.value = !expandSettings.value;
+										}
 										m.route.set(`/${name}`);
 									},
 									expandSettings: expandSettings.value,
@@ -96,21 +98,15 @@ const SideNav: FunctionComponent = () => {
 						m(
 							"div",
 							{
-								className: classNames("flex", {
-									hidden: !expandSettings.value,
-									"translate-y-0": expandSettings.value,
-								}),
-							},
-							[
-								m(
-									"div",
+								className: classNames(
+									"flex flex-col gap-y-4 font-normal pl-14 pt-4 h-[300px] w-full",
 									{
-										className:
-											"flex rounded-md bg-[#F9F9FB] justify-center mt-4 h-[300px] w-full border",
+										hidden: !expandSettings.value || shrink.value,
+										"translate-y-0": expandSettings.value,
 									},
-									m("div", { className: "flex flex-col" }, []),
 								),
-							],
+							},
+							[m("span", "Profile"), m("span", "Settings")],
 						),
 					],
 				),

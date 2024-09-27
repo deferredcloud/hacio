@@ -3,6 +3,7 @@ import m from "mithril";
 import Screen from "./components/Screen";
 
 import "./App.css";
+import Button from "./components/Buttons/Button";
 
 export function App(): Component {
 	return {
@@ -12,9 +13,17 @@ export function App(): Component {
 				m(
 					"div",
 					{
-						className: "flex justify-center items-center text-3xl font-bold",
+						className:
+							"flex flex-col gap-y-12 justify-center items-center text-3xl font-bold",
 					},
-					"Dashboard/Home",
+					[
+						m("div", "Dashboard/Home"),
+						m(Button, {
+							label: "Click me",
+							icon: "Calendar",
+							onClick: () => {},
+						}),
+					],
 				),
 			);
 		},
