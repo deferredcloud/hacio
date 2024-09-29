@@ -6,25 +6,25 @@ import "./App.css";
 import Button from "./components/Buttons/Button";
 
 export function App(): Component {
-	return {
-		view: () =>
-			m(
-				Screen,
-				m(
-					"div",
-					{
-						className:
-							"flex flex-col gap-y-12 justify-center items-center text-3xl font-bold",
-					},
-					[
-						m("div", "Hello world"),
-						m(Button, {
-							label: "Click me",
-							icon: "Calendar",
-							onClick: () => {},
-						}),
-					],
-				),
-			),
-	};
+  return {
+    view: () =>
+      m(
+        Screen,
+        m(
+          "div",
+          {
+            className:
+              "flex flex-col gap-y-12 justify-center items-center text-3xl font-bold",
+          },
+          [
+            m("div", "Hello world"),
+            m(Button, {
+              label: "Click me",
+              icon: "Calendar",
+              onClick: () => { },
+            }),
+          ],
+        ),
+      ),
+  };
 }

@@ -1,30 +1,33 @@
-import { signal, type Signal } from "@preact/signals";
+import { type Signal, signal } from "@preact/signals";
 import { LocalStorageHelpers } from "../utils";
+import type { ModalState } from "../types";
 
 const localStorageHelpers = new LocalStorageHelpers();
 
 // States
 export const shrink: Signal<boolean> = signal(
-	localStorageHelpers.getBool("shrink"),
+  localStorageHelpers.getBool("shrink"),
 );
 
 export const expandSettings: Signal<boolean> = signal(
-	localStorageHelpers.getBool("expandSettings"),
+  localStorageHelpers.getBool("expandSettings"),
 );
 
-expandSettings.subscribe((v) => {
-	localStorage.setItem("expandSettings", `${v}`);
+export const basicModal: Signal<ModalState> = signal({
+  _tag: "",
+  title: "",
+  content: "",
+  icon: "Help",
+  actions: [],
+  isOpen: false,
+  modalType: "info",
 });
 
-export const showNotificationsModal: Signal<boolean> = signal(
-	localStorageHelpers.getBool("showNotificationsModal"),
-);
+expandSettings.subscribe((v) => {
+  localStorage.setItem("expandSettings", `${v}`);
+});
 
 // Subscribers
 shrink.subscribe((v) => {
-	localStorage.setItem("shrink", `${v}`);
-});
-
-showNotificationsModal.subscribe((v) => {
-	localStorage.setItem("showNotificationsModal", `${v}`);
+  localStorage.setItem("shrink", `${v}`);
 });
