@@ -5,11 +5,12 @@ import Calendar from "./src/views/Calendar";
 import Mail from "./src/views/Mail";
 import Settings from "./src/views/Settings";
 
+// Routing
 m.route.prefix = "/";
 m.route(document.body, "/", {
-	"/": App,
-	"/analytics": Analytics,
-	"/calendar": Calendar,
-	"/mail": Mail,
-	"/settings": Settings,
+  "/": App,
+  "/analytics": Analytics,
+  "/calendar": Calendar,
+  "/mail": Mail,
+  "/settings": Settings,
 });

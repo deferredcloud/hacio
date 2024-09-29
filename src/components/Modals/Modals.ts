@@ -28,8 +28,8 @@ const Modals: FunctionComponent = {
             className: classNames("", {
               "flex jetbrains-mono-bold fixed inset-0 overflow-y-auto justify-center items-center z-50 transition-opacity ease-in-out":
                 basicModal.value,
-              "opacity-100": basicModal.value,
-              "opacity-0": !basicModal.value,
+              "opacity-100": basicModal.value.isOpen,
+              "opacity-0": !basicModal.value.isOpen,
             }),
           },
           m(Modal),

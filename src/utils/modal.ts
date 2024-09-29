@@ -26,7 +26,6 @@ export const hideModal = (): void => {
 };
 
 export const getIconColour = (type?: ModalTypes): string => {
-  console.log(type);
   if (!type) return "black";
   switch (type) {
     case "warning":
