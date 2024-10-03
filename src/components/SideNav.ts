@@ -15,7 +15,7 @@ const NavContainer: FunctionComponent<{ shrink: boolean }> = {
       "div",
       {
         className: classNames(
-          "bg-[#FFFFFF] h-full border-r-[#EFEFEF] border-r-2 transition-all ease-in-out",
+          "dark:bg-[#0A0A0A] bg-[#FFFFFF] h-full border-r-[#EFEFEF] border-r-2 transition-all ease-in-out",
           {
             "md:w-[320px] lg:w-[365px] translate-x-0": !shrink,
             "w-[96px]": shrink,

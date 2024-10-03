@@ -24,7 +24,7 @@ const Button: FunctionComponent<Attrs> = {
 		return m(
 			"button",
 			{
-				className: `flex items-center text-white rounded-lg justify-center px-4 py-2 text-xl font-normal bg-[#0066FF] ${className}`,
+				className: `flex items-center dark:text-black text-white dark:bg-white bg-black rounded-lg justify-center px-4 py-2 text-xl font-normal ${className}`,
 				disabled: isDisabled,
 				onclick: onClick,
 			},

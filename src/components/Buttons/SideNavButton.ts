@@ -21,7 +21,7 @@ export const SideNavButton: FunctionComponent<Attrs> = {
 				href: name === "Dashboard" ? "" : name.toLocaleLowerCase(),
 				onclick: onClick,
 				className: classNames("flex w-full", {
-					"bg-[#0066FF] rounded-md text-white": isSelected,
+					"dark:text-black text-white dark:bg-white bg-black rounded-md text-white": isSelected,
 				}),
 			},
 			[

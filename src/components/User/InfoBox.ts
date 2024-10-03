@@ -10,7 +10,7 @@ export const InfoBox: FunctionComponent = {
     m(
       "div",
       {
-        className: "flex justify-center items-center h-[64px] bg-[#FFFFFF]", // Ensure full width of the remaining space
+        className: "flex justify-center items-center h-[64px] dark:text-white text-black dark:bg-[#0A0A0A] bg-white", // Ensure full width of the remaining space
       },
       [
         m(
@@ -51,7 +51,7 @@ export const InfoBox: FunctionComponent = {
           m("span", { className: "jetbrains-mono-bold" }, "Ethan Morgan"),
           m(
             "span",
-            { className: "jetbrains-mono-bold text-[#6A6A6A]" },
+            { className: "jetbrains-mono-bold dark:text-white text-black dark:bg-[#0A0A0A]" },
             "ethan@acme.org",
           ),
         ]),

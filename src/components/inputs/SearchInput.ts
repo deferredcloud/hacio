@@ -12,7 +12,7 @@ export const SearchInput: Component<Attrs> = {
         attrs.value.value = e.value;
       },
       className:
-        "flex w-[244px] h-[44px] m-4 bg-[#F9F9FB] text-[#6A6A6A] text-[13px] jetbrains-mono-bold font-bold p-[8px] rounded-xl border border-[#EFEFEF] focus:outline-none",
+        "flex w-[244px] h-[44px] m-4 dark:text-black text-white dark:bg-white bg-[#F9F9FB] text-[13px] jetbrains-mono-bold font-bold p-[8px] rounded-xl border border-[#EFEFEF] focus:outline-none",
       placeholder: "Search... (CTRL+K)",
     }),
 };
